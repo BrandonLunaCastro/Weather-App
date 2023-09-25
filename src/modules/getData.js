@@ -1,7 +1,27 @@
-const getWeather = async () => {
-    const res = await fetch(" http://api.weatherapi.com/v1/current.json?key=0804b0f642fd40ccb16202934232209&q=mendoza")
+const getWeeklyForecast = async () => {
+    const res = await fetch(
+        "http://api.weatherapi.com/v1/forecast.json?key=0804b0f642fd40ccb16202934232209&days=7&q=mendoza"
+    )
     const json = await res.json()
-    console.log(json)
+    return {
+        weekly: json.forecast.forecastday
+    }
 }
+const getDailyForecast = async () => {
+    const response = await fetch(
+        "http://api.weatherapi.com/v1/forecast.json?key=0804b0f642fd40ccb16202934232209&q=mendoza"
+    )
+    const json = await response.json()
+    return {
+        hour: json.forecast.forecastday[0].hour,
+        day: json.forecast.forecastday[0].day,
+        currentWeather: json.current
+    }
+}
+/* const getActualWeather = async () => {
+    const response = await fetch("http://api.weatherapi.com/v1/current.json?key=0804b0f642fd40ccb16202934232209&q=mendoza")
+    const json = await response.json()
+    console.log(json)
+} */
 
-export { getWeather }
+export { getWeeklyForecast, getDailyForecast }

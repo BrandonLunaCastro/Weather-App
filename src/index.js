@@ -1,9 +1,8 @@
-import { getWeather } from "./modules/getData.js"
-
-console.log("hi")
+import loadContent from "./modules/content"
+import "./styles/style.css"
 
 const initApp = () => {
-    getWeather()
+    loadContent()
 }
 
 window.addEventListener("DOMContentLoaded", initApp)
