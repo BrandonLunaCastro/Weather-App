@@ -7,6 +7,10 @@ module.exports = {
         filename: "main.js",
         path: path.resolve(__dirname, "dist")
     },
+    devtool: "inline-source-map",
+    devServer: {
+        static: "./dist"
+    },
     module: {
         rules: [
             {
@@ -21,8 +25,8 @@ module.exports = {
                     options: {
                         presets: [
                             ["@babel/preset-env", { targets: "defaults" }]
-                        ],
-                        plugins: ["@babel/plugin-proposal-class-properties", "@babel/plugin-transform-runtime"]
+                        ]
+
                     }
                 }
             }
