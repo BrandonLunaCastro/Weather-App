@@ -1,8 +1,8 @@
 :root{
     font-family: sans-serif;
-    --main-color: #fff;
-    --secondary-color:#fff;
-    --acent-color:#fff;
+    --main-color: #FF731D;
+    --secondary-color:#FFF7E9;
+    --acent-color:#5F9DF7;
 } 
 *,
 ::after,
@@ -10,4 +10,32 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+header{
+    background-color: #FF731D;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    padding: 15px;
+    display: inherit;
+    align-items: center;
+}
+#search{
+    height: 30px;
+    display: inherit;
+    border: none;
+    border-radius: 5px;
+    appearance: none;
+    outline: none;
+}
+.section__zone{
+    display: inherit;
+    align-items: center;
+    gap: 4px;
+}
+.section__zone > img{
+    width: 42px;
+    height: 42px;
 }

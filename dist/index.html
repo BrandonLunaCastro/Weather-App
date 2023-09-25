@@ -3,13 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b94ace870d.js" crossorigin="anonymous"></script>
     <title>Weather-App</title>
 </head>
 <body>
     <header>
-        <h1>Open Weather</h1>
+        <div class="logo">
+            <i class="fa-solid fa-cloud fa-2xl"></i>
+            <h1>WeatherApp</h1>
+        </div>
+        <div class="section__zone">
+            <p class="zone"></p>
+            <img src="#" id="image__zone">
+        </div>
+        <input type="search" name="search" id="search" placeholder="search location">
     </header>
-    <main></main>
+    <main>
+        <article>
+            <h2 class="location"></h2>
+            <p class="country"></p>
+            <div>
+                <p class="temp"></p>
+                <img id="icon" src="#">
+            </div>
+        </article>
+    </main>
     <footer></footer>
     <script src="main.js"></script>
 </body>
