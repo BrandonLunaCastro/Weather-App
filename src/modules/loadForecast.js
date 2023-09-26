@@ -17,5 +17,3 @@ export default function loadForecast(weekly) {
         showForecast(article, weekly[i]);
     });
 }
-
-// day.innerText = format(new Date(weekly[i].date), "EEEE");

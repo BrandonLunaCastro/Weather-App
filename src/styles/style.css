@@ -55,7 +55,15 @@
     height: 100%;
     border: 1px solid gray;
     grid-column: 1/5;
+    display: flex;
+    gap: 25px; 
+ /*    
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    grid-template-rows: 100px;*/
     overflow-x: scroll;
+}
+.container__hour{
+    width: 250px;
 }
 .weather__text{
     grid-row: 3;
@@ -94,6 +102,10 @@ article[data-forecast]{
 img[data-img]{
     height: 4rem;
     width: 4rem;
+}
+.img__hour{
+    width: 4rem;
+    height: 4rem;
 }
 .min__temp{
     font-size: .9rem;

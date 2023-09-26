@@ -1,8 +1,9 @@
 import { getDailyForecast, getWeeklyForecast } from "./getData";
 import loadForecast from "./loadForecast";
+import loadHour from "./loadPerHour";
 
-const showContent = async (location) => {
-    location = !location ? "mendoza" : location;
+const showContent = async (data) => {
+    const location = !data ? "mendoza" : data;
     const weekly = await getWeeklyForecast(location);
     const daily = await getDailyForecast(location);
     const zone = document.querySelector(".location");
@@ -22,6 +23,7 @@ const showContent = async (location) => {
     document.querySelector(".gust").innerText = `${daily.currentWeather.gust_kph} km/h`;
     document.querySelector(".humidity").innerText = `${daily.currentWeather.humidity}%`;
     loadForecast(weekly);
+    loadHour(daily.hour);
     // console.log(daily);
 };
 export default function loadContent() {
