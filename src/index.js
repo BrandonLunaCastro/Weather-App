@@ -1,8 +1,8 @@
-import loadContent from "./modules/content"
-import "./styles/style.css"
+import loadContent from "./modules/loadContent";
+import "./styles/style.css";
 
 const initApp = () => {
-    loadContent()
-}
+    loadContent();
+};
 
-window.addEventListener("DOMContentLoaded", initApp)
+window.addEventListener("DOMContentLoaded", initApp);
