@@ -7,23 +7,33 @@
     <title>Weather-App</title>
 </head>
 <body>
-    <header>
-    </header>
     <main>
         <article class="container">
+            <input type="search" name="search" id="search">
             <div class="box1">
                 <h2 class="location"></h2>  
                 <span class="region"></span>
+                <p class="hour"></p>
             </div>
             <div class="box2">
-                <img src="#" id="main__icon">
+                <div>
+                    <img src="#" id="main__icon">
+                    <p class="degree"></p>
+                </div>
                 <p class="weather__text"></p>
             </div>
-            <div>
-                <p class="degree"></p>
-                <p class="feels"></p>
+            <div class="box3">
+                <p data-wrapper >Wind <span class="wind"></span></p>
+                <p data-wrapper >Wind Gust <span class="gust"></span></p>
+                <p data-wrapper >Real Feel<span class="feels"></span></p>
+                <p data-wrapper >Humidity <span class="humidity"></span></p>
             </div>
-            <input type="search" name="search" id="search">
+            <div class="box4">
+                <article data-forecast></article>
+                <article data-forecast></article>
+                <article data-forecast></article>
+            </div>
+            <div class="box5"></div>
         </article>
     </main>
     <footer></footer>
