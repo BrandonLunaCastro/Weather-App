@@ -1,8 +1,8 @@
 :root{
     font-family: sans-serif;
-    --main-color: #30475E;
+    --main-color: #30475E10;
     --secondary-color:#F5F5F5;
-    --accent-color:#F05454;
+    --accent-color:#F0545490;
 } 
 *,
 ::after,
@@ -10,6 +10,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+html{
+   /*  background: url("../img/cloudy.gif"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../img/clearN.jpg");
 }
 .button__temp{
     border: 1px solid gray;
@@ -26,7 +33,7 @@
 }
 .btn{
     width:  calc(130px - 50%);
-    background-color: rgba(0, 0, 255 ,0.4);
+    background-color: var(--accent-color);
     height: 40px;
     position: absolute;
     left: 0;
@@ -45,8 +52,10 @@ main{
     margin:  100px 0;
 }
 .container{
-    border: 1px solid gray;
     border-radius: 18px;
+    background: var(--main-color);
+ /*    color: var(--secondary-color); */
+    backdrop-filter: blur(1.2rem);
     padding: 15px;
     width: 550px;
     height: 630px;
@@ -129,6 +138,7 @@ main{
     outline: none;
     height: 25px;
     border: none;
+    background: transparent;
     border-bottom: 2px solid var(--main-color);
 }
 p[data-wrapper]{
@@ -156,4 +166,7 @@ img[data-img]{
 .feels__hour{
     color: gray;
     font-size: .9rem;
+}
+.text_hour{
+    white-space: nowrap;
 }
