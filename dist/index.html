@@ -7,13 +7,22 @@
     <title>Weather-App</title>
 </head>
 <body>
+    <header>
+        <div class="button__temp">
+            <div class="btn"></div>
+            <button type="button" id="celsius">C</button>
+            <button type="button" id="fahrenheit">F</button>
+        </div>
+    </header>
     <main>
-        <article class="container">
-            <input type="search" name="search" id="search">
+            <article class="container">
+            <div class="search__box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" name="search" id="search">
+            </div>
             <div class="box1">
                 <h2 class="location"></h2>  
-                <span class="region"></span>
-                <p class="hour"></p>
+                <p><span class="region"></span> | <span class="hour"></span></p>
             </div>
             <div class="box2">
                 <div>
