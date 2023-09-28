@@ -6,7 +6,7 @@ const showForecastHour = (info) => {
     } = info;
     const article = document.createElement("article");
     const fragment = document.createDocumentFragment();
-    const degree = sessionStorage.getItem("temperature");
+    const degree = !sessionStorage.getItem("temperature") ? "C" : sessionStorage.getItem("temperature");
     const temp = degree === "C" ? `${temp_c}°c` : `${temp_f}°F`;
     const feels = degree === "C" ? `${feelslike_c}°c` : `${feelslike_f}°F`;
     article.classList.add("container__hour");
