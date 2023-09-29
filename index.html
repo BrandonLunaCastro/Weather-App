@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="shortcut icon" href="../src/img/icon.png" type="image/x-icon">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <link rel="shortcut icon" href="../src/img/icon.png" type="image/x-icon" />
     <script
       src="https://kit.fontawesome.com/b94ace870d.js"
       crossorigin="anonymous"
@@ -22,7 +26,7 @@
       <article class="container">
         <div class="search__box">
           <i class="fa-solid fa-location-dot"></i>
-          <input type="search" name="search" id="search" autocomplete="off"/>
+          <input type="search" name="search" id="search" autocomplete="off" />
           <p class="show__error"></p>
         </div>
         <div class="box1">
@@ -52,8 +56,13 @@
       <p class="photographer"></p>
     </main>
     <footer class="footer">
-        <p>Design by Brandon Luna 2023</p>
-        <a href="https://github.com/BrandonLunaCastro" rel="noopener" target="_blank"><i class="fa-brands fa-github fa-2xl" style="color:#053B50 ;"></i></a>
+      <p>Design by Brandon Luna 2023</p>
+      <a
+        href="https://github.com/BrandonLunaCastro"
+        rel="noopener"
+        target="_blank"
+        ><i class="fa-brands fa-github fa-2xl" style="color: #053b50"></i
+      ></a>
     </footer>
     <script src="main.js"></script>
   </body>
